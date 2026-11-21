@@ -9,7 +9,7 @@ import (
 
 	
 )
-
+ 
 func main() {
 
 	db := database.ConnectDB()
@@ -21,7 +21,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("GET /", handlers.Home)
-		
+
 	mux.HandleFunc("GET /space", handlers.GetSpace)
 
 	mux.HandleFunc("POST /create-space", handlers.CreateSpace)
