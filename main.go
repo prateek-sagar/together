@@ -26,9 +26,13 @@ func main() {
 
 	mux.HandleFunc("POST /create-space", handlers.CreateSpace)
 
-	// mux.HandleFunc("POST /enter-space", )
+	mux.HandleFunc("POST /enter-space", handlers.EnterSpace)
 
-	// mux.HandleFunc("POST /add-media", )
+	mux.HandleFunc("GET /get-members", handlers.GetMembersHandler)
+
+	mux.HandleFunc("GET /get-member-by-name", handlers.GetMemberByNameHandler)
+
+	mux.HandleFunc("POST /add-media", handlers.CreateMedia)
 
 	// mux.HandleFunc("POST /sync-media", )
 
